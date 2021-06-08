@@ -13,4 +13,18 @@
   .advert {
     @apply flex justify-center space-x-8 whitespace-nowrap
   }
+  .search-header {
+    @apply flex px-6 py-3 ml-10 mr-5 border-gray-300 rounded-full shadow-lg max-w-2xl items-center 
+  }
+  .header-input{
+    @apply flex-grow w-full focus:outline-none
+  }
+
+  .header-logo{
+    @apply h-7 text-gray-500 cursor-pointer transform transition duration-100 hover:scale-150
+  }
+
+  .header-micro {
+    @apply h-6 mr-3 hidden sm:inline-flex text-blue-500 border-l-2 pl-4 border-gray-300
+  }
 }
