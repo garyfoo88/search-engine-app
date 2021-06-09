@@ -2,6 +2,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/solid";
+import Avatar from "./Avatar";
+import HeaderOptions from "./HeaderOptions";
 const Header = () => {
   const router = useRouter();
   const searchInputRef = useRef(null);
@@ -25,7 +27,7 @@ const Header = () => {
           className="cursor-pointer"
           onClick={() => router.push("/")}
         />
-        <form className="search-header">
+        <form className="search-header flex-grow">
           <input type="text" ref={searchInputRef} className="header-input" />
           <XIcon
             className="header-logo sm:m-3"
@@ -37,7 +39,11 @@ const Header = () => {
             Search
           </button>
         </form>
+        <Avatar className="ml-auto" url="./profilepic.png" />
+
+        
       </div>
+      <HeaderOptions />
     </header>
   );
 };

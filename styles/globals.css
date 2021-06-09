@@ -27,4 +27,7 @@
   .header-micro {
     @apply h-6 mr-3 hidden sm:inline-flex text-blue-500 border-l-2 pl-4 border-gray-300
   }
+  .header-icons {
+    @apply h-4
+  }
 }
