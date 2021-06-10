@@ -28,7 +28,7 @@ const Header = () => {
           onClick={() => router.push("/")}
         />
         <form className="search-header flex-grow">
-          <input type="text" ref={searchInputRef} className="header-input" />
+          <input defaultValue={router.query.term} type="text" ref={searchInputRef} className="header-input" />
           <XIcon
             className="header-logo sm:m-3"
             onClick={() => (searchInputRef.current.value = "")}
