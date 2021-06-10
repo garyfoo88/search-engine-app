@@ -1,3 +1,5 @@
+import PaginationButtons from "./PaginationButtons";
+
 function SearchResults({ results }) {
   return (
     <div className="mx-auto w-full px-3 sm:pl-[5%] md:pl-[14%] lg:pl-52">
@@ -6,10 +8,23 @@ function SearchResults({ results }) {
         {results.searchInformation?.formattedSearchTime} seconds)
       </p>
       {results.items?.map((result) => {
-          return (
-              <div key={result.link}>test</div>
-          )
+        return (
+          <div key={result.link} className="result-container">
+            <div className="group">
+              <a href={result.link} className="text-sm">
+                {result.formattedUrl}
+              </a>
+              <a href={result.link}>
+                <h2 className="truncate text-xl text-blue-500 font-medium group-hover:underline">
+                  {result.title}
+                </h2>
+              </a>
+            </div>
+            <p className="line-clamp-2">{result.snippet}</p>
+          </div>
+        );
       })}
+      <PaginationButtons />
     </div>
   );
 }

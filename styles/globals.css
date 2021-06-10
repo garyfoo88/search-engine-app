@@ -21,7 +21,7 @@
   }
 
   .header-logo{
-    @apply h-7 text-gray-500 cursor-pointer transform transition duration-100 hover:scale-150
+    @apply h-2 text-gray-500 cursor-pointer transform transition duration-100 hover:scale-150
   }
 
   .header-micro {
@@ -29,5 +29,13 @@
   }
   .header-icons {
     @apply h-4
+  }
+
+  .result-container {
+    @apply max-w-xl mb-8
+  }
+
+  .pagination-container {
+    @apply flex flex-grow flex-col items-center cursor-pointer hover:underline
   }
 }
